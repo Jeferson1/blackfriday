@@ -1,0 +1,306 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* HEADER */
+
+header {
+    height: 80vh;
+    background-image: url('../images/skate-bg.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-around;
+    width: 10vw;
+}
+
+.icons i{
+    color: rgb(255, 255, 255);
+}
+
+nav h1 {
+    font-weight: 800 ;
+    font-size: 48px;
+    font-style: italic;
+    color: rgb(240, 228, 228);
+    margin-left: 20px;
+    text-shadow: 15px 10px 20px black;
+    cursor: pointer;
+}
+
+/* BANNER */
+
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.black-friday--text {
+    display: inline-block;
+    transform: rotateZ(-10deg);
+    margin-left: 40px;
+    margin-top: 35px;
+}
+
+.black-friday--text h1 {
+    font-weight: 800 ;
+    font-size: 130px;
+    font-style: italic;
+    color: rgb(215, 224, 91);
+    text-shadow: 15px 10px 20px black;
+}
+
+
+/* FORMULÁRIO */
+
+.user-form {
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 5px;
+    margin-top: 40px;
+    padding: 20px;
+}
+
+.user-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 400px;
+    width: 400px;
+}
+
+.user-form p {
+    color: #fff;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-style: italic;
+    font-size: 13px;
+}
+
+.user-form span {
+    color: rgb(247, 0, 0);
+    font-weight: 800;
+    text-transform: uppercase;
+    font-style: italic;
+    font-size: 13px;
+}
+
+.user-form input {
+    width: 300px;
+    height: 40px;
+    border-radius: 5px;
+    border-style: none;
+    outline: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 17px;
+    padding: 5px;
+}
+
+.button {
+    height: 40px;
+    width: 300px;
+    font-size: 17px;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-style: none;
+    cursor: pointer;
+    background-color: rgba(87, 70, 70, 0);
+    color: rgb(231, 231, 224);
+}
+
+.button:hover {
+    background-color: rgb(5, 5, 5);
+    border-style: solid;
+    border-color: rgb(215, 224, 91);
+    color: rgb(215, 224, 91);
+    transition: 0.2s;
+    box-shadow: 10px 10px 1px rgb(215, 224, 91);
+}
+
+/* PRODUTOS */
+
+.product-area {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0 auto;
+    height: 500px;
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 410px;
+}
+
+.product img {
+    margin-top: -100px;
+    width: 300px;
+    height: 320px;
+}
+
+.details {
+    position: absolute;
+    margin-top: 230px;
+    line-height: 30px;
+    background-color: rgb(39, 35, 35);
+    color: #fff;
+    padding: 20px;
+    width: 300px;
+    height: 160px;
+    border-top-right-radius: 50px;
+}
+
+.details:hover, .product img:hover {
+    background-color: black;
+    cursor: pointer;
+    transition: 0.5s
+}
+
+/* RODAPÉ */
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgb(22, 22, 24);
+    height: 100v;
+    width: 100%;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+footer i {
+    color: white;
+}
+
+.medias {
+    width: 200px;
+}
+
+footer h1 {
+    font-weight: 800 ;
+    font-size: 48px;
+    font-style: italic;
+    color: rgb(240, 228, 228);
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+footer span {
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    font-weight: 800;  
+    color: white;
+    font-style: italic;
+}
+
+.details h3{
+    color: rgb(215, 224, 91);
+}
+
+/* MENSAGEM DE ALERTA */
+
+.hidden {
+    visibility: hidden;
+}
+
+.hidden {
+    visibility: show;
+}
+
+/* IPAD */
+
+@media (min-width: 600px) and (max-width: 800px){
+
+    .black-friday--text h1 {
+        font-size: 80px;
+    }
+
+    .icons {
+        width: 20vw;
+    }
+
+    .banner {
+        flex-direction: column;
+    }
+
+    .user-form {
+        margin-top: 25px;
+    } 
+
+    .product-area {
+        flex-wrap: wrap;
+        height: 100vh;
+    }
+}
+
+/* IPHONE */
+
+@media (max-width: 599px){
+    .black-friday--text h1 {
+        font-size: 48px;
+    }
+
+    .icons {
+        width: 30vw;
+    }
+
+    .banner {
+        flex-direction: column;
+    }
+
+    .user-form {
+        margin-top: 25px;
+    }
+    
+    .user-form form {
+        height: 300px;
+        width: 300px;
+    }
+    
+    .user-form p {
+        text-align: center;
+    }
+    
+    .product-area {
+        flex-wrap: wrap;
+        height: 100%;
+        margin: 0 auto;
+    }
+    
+    .product img {
+        width: 200px;
+        height: 220px;
+    }
+
+    footer {
+        flex-direction: column;
+        justify-content: space-around;
+        height: 30vh;
+    }
+}
